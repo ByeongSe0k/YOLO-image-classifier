@@ -1,4 +1,4 @@
-# yolo-image-classifier
+# YOLO-image-classifier
 spring 2024 programming project
 
 - used yolov3 model in [object-detection-opencv](https://github.com/arunponnusamy/object-detection-opencv).
