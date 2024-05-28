@@ -14,4 +14,6 @@ To run the code, please visit [object-detection-opencv](https://github.com/arunp
 pip install -r requirements.txt
 ```
 
+# To run the code
+---
 
