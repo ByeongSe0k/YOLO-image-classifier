@@ -10,8 +10,8 @@ To run the code, please visit [object-detection-opencv](https://github.com/arunp
 - opencv
 - numpy
 
-'''
+```
 pip install -r requirements.txt
-'''
+```
 
 
