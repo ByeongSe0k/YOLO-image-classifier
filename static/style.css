@@ -1,0 +1,107 @@
+body {
+    font-family: 'Nunito', sans-serif; /* 폰트 변경 */
+    background-color: #f4f7f6; /* 배경 색상 변경 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 600px; /* 컨테이너 최대 너비 조정 */
+    width: 90%; /* 너비를 100%에서 90%로 변경하여 약간의 여백 제공 */
+    padding: 40px;
+    border-radius: 20px; /* 둥근 모서리 반경 조정 */
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 변경 */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #5D5FEF; /* 제목 색상 변경 */
+    font-size: 28px; /* 폰트 크기 조정 */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.custom-file-upload {
+    border: 2px solid #5D5FEF; /* 테두리 색상 변경 */
+    color: #5D5FEF;
+    display: inline-block;
+    padding: 10px 25px; /* 패딩 조정 */
+    cursor: pointer;
+    border-radius: 25px; /* 둥근 모서리 반경 조정 */
+    transition: all 0.3s ease;
+    font-size: 16px; /* 폰트 크기 조정 */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px; /* 상단 여백 추가 */
+}
+
+.custom-file-upload:hover, button[type="submit"]:hover {
+    background-color: #5D5FEF; /* 배경 색상 변경 */
+    color: #fff; /* 글자 색상 변경 */
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2); /* 호버 시 그림자 효과 추가 */
+}
+
+#fileInput {
+    display: none;
+}
+
+button[type="submit"] {
+    padding: 10px 25px; /* 패딩 조정 */
+    border: none;
+    border-radius: 25px; /* 둥근 모서리 반경 조정 */
+    background-color: #5D5FEF; /* 배경 색상 변경 */
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px; /* 폰트 크기 조정 */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px; /* 상단 여백 추가 */
+}
+
+.processing {
+    display: none;
+    color: #5D5FEF; /* 색상 변경 */
+    font-size: 18px; /* 폰트 크기 조정 */
+    margin-top: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* 방향을 가로에서 세로로 변경 */
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* 너비를 100%로 설정 */
+}
+
+.form-group > * {
+    margin: 5px 0; /* 상하 여백 조정 */
+}
+
+input[type="number"] {
+    padding: 10px; /* 패딩 조정 */
+    border: 2px solid #5D5FEF; /* 테두리 색상 변경 */
+    border-radius: 25px; /* 둥근 모서리 반경 조정 */
+    font-size: 16px; /* 폰트 크기 조정 */
+    width: 100px; /* 너비 조정 */
+    text-align: center;
+    margin-top: 10px; /* 상단 여백 추가 */
+}
+
+label {
+    margin-top: 10px; /* 상단 여백 추가 */
+    font-size: 16px; /* 폰트 크기 조정 */
+    color: #5D5FEF; /* 레이블 색상 변경 */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

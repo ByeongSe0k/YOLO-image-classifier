@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLO Image Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>YOLO Image Classifier</h1>
+        <form id="uploadForm" enctype="multipart/form-data" class="form-group">
+            <label for="fileInput" class="custom-file-upload">Select Folder</label>
+            <input type="file" id="fileInput" name="file" webkitdirectory directory multiple>
+            <div id="fileCount"></div>
+            
+            <label for="widthInput">Width</label>
+            <input type="number" id="widthInput" name="width">
+            
+            <label for="heightInput">Height</label>
+            <input type="number" id="heightInput" name="height">
+            
+            <button type="submit">Upload</button>
+        </form>
+        <div class="processing" id="processing">Processing...</div>
+    </div>
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function() {
+            const files = this.files;
+            document.getElementById('fileCount').textContent = files.length + ' files selected';
+        });
+
+        document.getElementById('uploadForm').onsubmit = async function(event) {
+            event.preventDefault();
+            document.getElementById('processing').style.display = 'block'; // Show processing message
+            
+            const formData = new FormData();
+            const files = document.getElementById('fileInput').files;
+            const width = document.getElementById('widthInput').value;
+            const height = document.getElementById('heightInput').value;
+
+            for (let i = 0; i < files.length; i++) {
+                formData.append('files', files[i]);
+            }
+            
+            // width와 height 값이 존재하는 경우에만 추가
+            if (width) {
+                formData.append('width', width);
+            }
+            if (height) {
+                formData.append('height', height);
+            }
+
+            const response = await fetch('/upload_folder', {
+                method: 'POST',
+                body: formData,
+            });
+
+            if (response.ok) {
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = 'classified.zip';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                document.getElementById('processing').style.display = 'none'; // Hide processing message
+            }
+        };
+    </script>
+</body>
+</html>
