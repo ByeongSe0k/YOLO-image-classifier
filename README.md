@@ -22,7 +22,7 @@ To download
 - yolov3.cfg
 - yolov3.txt
 ```
-please visit [object-detection-opencv](https://github.com/arunponnusamy/object-detection-opencv).<br>
+please visit [object-detection-opencv](https://github.com/arunponnusamy/object-detection-opencv).<br><br>
 Download yolov3.weights by copying
 ```
 wget https://pjreddie.com/media/files/yolov3.weights
