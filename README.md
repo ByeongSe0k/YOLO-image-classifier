@@ -15,7 +15,7 @@ pip install -r requirements.txt
 
 # To run the code
 
-To run the code, you need to install dependencies.
+To run the code, you need to install dependencies first.
 
 To download
 ```
