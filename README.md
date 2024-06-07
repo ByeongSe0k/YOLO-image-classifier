@@ -26,8 +26,8 @@ wget https://pjreddie.com/media/files/yolov3.weights
 ```
 in your terminal.<br><br>
 
-Place yolov3.cfg, yolov3.txt, yolov3.weights in the same directory as app.py<br><br>
+Place ```yolov3.cfg, yolov3.txt, yolov3.weights``` in the same directory as app.py<br><br>
 
 type
 ```pypthon3 app.py```
-or just run app.py to run the server. 
+or just run ```app.py``` to run the server. 
