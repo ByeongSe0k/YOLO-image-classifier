@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 To run the code, please visit [object-detection-opencv](https://github.com/arunponnusamy/object-detection-opencv) and download <br>
 ```
-- yolov3.cfg<br>
+- yolov3.cfg
 - yolov3.txt
 ```
 
